@@ -1,0 +1,238 @@
+namespace = BiggerColonies
+
+### Initialiser
+# if multiplayer -> spawn engine with default settings
+# if not multiplayer -> show menu and let user decide
+#event = {
+#	id = BiggerColonies.0
+#	hide_window = yes
+#	is_triggered_only = yes
+#	immediate = {
+#		if = {
+#			limit = { is_multiplayer = yes }
+#			set_global_flag = bigger_colonies_chance_default
+#			random_country = { country_event = { id = BiggerColonies.2 } }
+#		}
+#		else_if = {
+#			limit = { is_multiplayer = no }
+#			random_country = {
+#				limit = { is_ai = no }
+#				country_event = { id = BiggerColonies.1 }
+#			}
+#		}
+#	}
+#}
+
+country_event = {
+	id = BiggerColonies.0
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = { is_ai = no }
+	immediate = { country_event = { id = BiggerColonies.1 } }
+}
+
+country_event = {
+	id = BiggerColonies.1
+	title = BiggerColonies.1.Name
+	desc = BiggerColonies.1.Desc
+	picture = GFX_evt_alien_nature
+	show_sound = event_alien_nature
+	is_triggered_only = yes
+	#trigger = { is_multiplayer = no }
+	immediate = {}
+	option = {
+		name = BiggerColonies.1.Low
+		custom_tooltip = mod_bigger_colonies
+		set_global_flag = bigger_colonies_chance_low
+		#country_event = { id = BiggerColonies.2 days = 1 }
+		country_event = { id = BiggerColonies.2 }
+	}
+	option = {
+		name = BiggerColonies.1.Default
+		custom_tooltip = mod_bigger_colonies
+		set_global_flag = bigger_colonies_chance_default
+		country_event = { id = BiggerColonies.2 }
+	}
+	option = {
+		name = BiggerColonies.1.High
+		custom_tooltip = mod_bigger_colonies
+		set_global_flag = bigger_colonies_chance_high
+		country_event = { id = BiggerColonies.2 }
+	}
+	option = {
+		name = BiggerColonies.1.All
+		custom_tooltip = mod_bigger_colonies
+		set_global_flag = bigger_colonies_chance_all
+		country_event = { id = BiggerColonies.2 }
+	}
+}
+
+country_event = {
+	id = BiggerColonies.2
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = {
+        every_galaxy_planet = {
+            limit = { 
+				habitable_colony = yes
+				NOR = { owner = { has_origin = origin_life_seeded } owner = { has_origin = origin_post_apocalyptic } }
+				NOT = { has_planet_flag = bigger_colony_checked }
+			}
+			set_planet_flag = bigger_colony_checked
+			random_list = {
+				2 = { modifier = { factor = 0 has_global_flag = bigger_colonies_chance_all } }
+				2 = { 	
+					modifier = { factor = 0.5 has_global_flag = bigger_colonies_chance_low }
+					modifier = { factor = 2 has_global_flag = bigger_colonies_chance_high }
+					if = {
+						limit = { is_moon = no has_owner = no }
+						if = {# selected planet goes directly to size 25. 
+							limit = { planet_size < 25 } 
+							set_planet_size = 25 
+							while = { count = 5 bc_add_random_deposit = yes }				
+							while = { count = 3 bc_add_random_blocker = yes }	
+							while = { count = 1 bc_add_random_diversity_mod_deposit = yes } # !!District Diversity Mod
+						}
+						while = {#selected planet can go up from size 25 to 60.
+							count = 35 
+							random_list = {
+								1 = {} 
+								1 = { 
+									change_planet_size = 1
+									random_list = { 1 = {} 2 = { bc_add_random_deposit = yes } }
+									random_list = { 1 = {} 1 = { bc_add_random_blocker = yes } }
+									random_list = { 1 = {} 1 = { bc_add_random_diversity_mod_deposit = yes } } # !!District Diversity Mod
+								}						
+							} 
+						}
+					}
+					else_if = {
+						limit = { is_moon = yes has_owner = no }
+						if = {# selected moon goes directly to size 15. 
+							limit = { planet_size < 25 } 
+							set_planet_size = 15 
+							while = { count = 3 bc_add_random_deposit = yes }
+							while = { count = 2 bc_add_random_blocker = yes }
+							while = { count = 1 bc_add_random_diversity_mod_deposit = yes } # !!District Diversity Mod						
+						}
+						while = {#selected moon can go up from size 15 to 35.
+							count = 20 
+							random_list = {
+								1 = {} 
+								1 = { 
+									change_planet_size = 1
+									random_list = { 1 = {} 2 = { bc_add_random_deposit = yes } }
+									random_list = { 1 = {} 1 = { bc_add_random_blocker = yes } }
+									random_list = { 1 = {} 1 = { bc_add_random_diversity_mod_deposit = yes } } # !!District Diversity Mod
+								}						
+							} 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = BiggerColonies.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { 
+				owner = { 
+					OR = {
+						has_origin = origin_life_seeded
+						has_origin = origin_crystal_world 
+						has_origin = origin_floating_world 
+						has_origin = origin_graveyard_world 
+						has_origin = origin_techno_world
+						has_origin = origin_archive_world
+					}
+				} 
+			}
+			set_planet_size = 50		
+			add_deposit = d_searing_desert			
+			add_deposit = d_underwater_vent
+			add_deposit = d_tempestous_mountain		
+			add_deposit = d_searing_desert			
+			add_deposit = d_underwater_vent
+			add_deposit = d_tempestous_mountain		
+			add_deposit = d_ore_rich_caverns 		
+			add_deposit = d_prosperous_mesa
+			add_deposit = d_submerged_ore_veins
+			add_deposit = d_ore_rich_caverns 		
+			add_deposit = d_prosperous_mesa
+			add_deposit = d_submerged_ore_veins
+			add_deposit = d_lush_jungle	
+			add_deposit = d_teeming_reef		
+			add_deposit = d_black_soil	
+			add_deposit = d_lush_jungle	
+			add_deposit = d_teeming_reef		
+			add_deposit = d_black_soil		
+			random_list = {
+				33 = { add_deposit = d_frozen_gas_lake }
+				33 = { add_deposit = d_prosperous_mesa }
+				33 = { add_deposit = d_fertile_lands }
+			}	
+			add_deposit = d_dust_caverns
+			add_deposit = d_bubbling_swamp
+			add_deposit = d_crystalline_caverns
+			while = { count = 4 bc_add_random_diversity_mod_deposit = yes } # !!District Diversity Mod
+		}
+		else_if = {
+			limit = { owner = { has_origin = origin_post_apocalyptic } }
+			set_planet_size = 50		
+			add_deposit = d_tomb_world_ruins
+			add_deposit = d_tomb_world_wasteland	
+			add_deposit = d_hot_springs		
+			add_deposit = d_searing_desert
+			add_deposit = d_underwater_vent	
+			add_deposit = d_veiny_cliffs		
+			add_deposit = d_ore_rich_caverns
+			add_deposit = d_submerged_ore_veins
+			add_deposit = d_lichen_fields	
+			add_deposit = d_fungal_caves 	
+			add_deposit = d_fungal_forest
+			while = { count = 4 bc_add_random_diversity_mod_deposit = yes } # !!District Diversity Mod
+		}
+		else_if = {
+			limit = { NOR = {  owner = { has_origin = origin_life_seeded } owner = { has_origin = origin_post_apocalyptic } } }
+			if = {# selected capital goes directly to size 25. 
+				limit = { planet_size < 25 } 
+				set_planet_size = 25 
+				while = { count = 5 bc_add_random_deposit = yes }		
+				while = { count = 2 bc_add_random_blocker = yes }
+				while = { count = 1 bc_add_random_diversity_mod_deposit = yes } # !!District Diversity Mod
+			}
+			while = {#selected capital can go up from size 25 to 45.
+				count = 20 
+				random_list = {
+					1 = {} 
+					1 = { 
+						change_planet_size = 1
+						random_list = { 1 = {} 2 = { bc_add_random_deposit = yes } }
+						random_list = { 1 = {} 1 = { bc_add_random_blocker = yes } }
+						random_list = { 1 = {} 1 = { bc_add_random_diversity_mod_deposit = yes } } # !!District Diversity Mod
+					}						
+				} 
+			}
+		}
+	}
+}
+
+event = {
+	id = BiggerColonies.999
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { random_country = { country_event = { id = BiggerColonies.2 } } }
+}
+
+planet_event = {
+	id = BiggerColonies.1000
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = { while = { count = 25 random_list = { 1 = { change_planet_size = 1 random_list = { 1 = {} 2 = { bc_add_random_deposit = yes } } bc_add_random_blocker = yes } 1 = {} } } }
+}

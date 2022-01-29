@@ -1,0 +1,150 @@
+bc_add_random_energy_deposit = {	
+	random_list = {
+		100 = { modifier = { factor = 0 NOR = { for_d_arid_highlands = yes } } add_deposit = d_arid_highlands }
+		100 = { modifier = { factor = 0 NOR = { for_d_hot_springs = yes } } add_deposit = d_hot_springs }
+		50 = { modifier = { factor = 0 NOR = { for_d_rushing_waterfalls = yes } } add_deposit = d_rushing_waterfalls }
+		50 = { modifier = { factor = 0 NOR = { for_d_searing_desert = yes } } add_deposit = d_searing_desert }
+		50 = { modifier = { factor = 0 NOR = { for_d_frozen_gas_lake = yes	} } add_deposit = d_frozen_gas_lake }	
+		25 = { modifier = { factor = 0 NOR = { for_d_geothermal_vent = yes	} } add_deposit = d_geothermal_vent }
+		25 = { modifier = { factor = 0 NOR = { for_d_underwater_vent = yes	} } add_deposit = d_underwater_vent }
+		25 = { modifier = { factor = 0 NOR = { for_d_tempestous_mountain = yes	} } add_deposit = d_tempestous_mountain }
+	}
+}
+
+bc_add_random_minerals_deposit = {	
+	random_list = {
+		100 = { modifier = { factor = 0 NOR = { for_d_veiny_cliffs = yes } } add_deposit = d_veiny_cliffs }
+		100 = { modifier = { factor = 0 NOR = { for_d_mineral_fields = yes } } add_deposit = d_mineral_fields }
+		50 = { modifier = { factor = 0 NOR = { for_d_prosperous_mesa = yes } } add_deposit = d_prosperous_mesa }
+		50 = { modifier = { factor = 0 NOR = { for_d_ore_rich_caverns = yes } } add_deposit = d_ore_rich_caverns }
+		25 = { modifier = { factor = 0 NOR = { for_d_rich_mountain = yes } } add_deposit = d_rich_mountain }
+		25 = { modifier = { factor = 0 NOR = { for_d_submerged_ore_veins = yes } } add_deposit = d_submerged_ore_veins }
+	}
+}
+
+
+bc_add_random_food_deposit = {	
+	random_list = {
+		100 = { modifier = { factor = 0 NOR = { for_d_lichen_fields = yes } } add_deposit = d_lichen_fields }
+		100 = { modifier = { factor = 0 NOR = { for_d_bountiful_plains = yes } } add_deposit = d_bountiful_plains }
+		100 = { modifier = { factor = 0 NOR = { for_d_rugged_woods = yes } } add_deposit = d_rugged_woods }
+		100 = { modifier = { factor = 0 NOR = { for_d_green_hills = yes } } add_deposit = d_green_hills }
+		100 = { modifier = { factor = 0 NOR = { for_d_forgiving_tundra = yes } } add_deposit = d_forgiving_tundra }
+		100 = { modifier = { factor = 0 NOR = { for_d_boggy_fens = yes } } add_deposit = d_boggy_fens }
+		100 = { modifier = { factor = 0 NOR = { for_d_nutritious_mudland = yes } } add_deposit = d_nutritious_mudland }
+		50 = { modifier = { factor = 0 NOR = { for_d_fungal_caves = yes } } add_deposit = d_fungal_caves }
+		50 = { modifier = { factor = 0 NOR = { for_d_lush_jungle = yes } } add_deposit = d_lush_jungle }
+		50 = { modifier = { factor = 0 NOR = { for_d_fertile_lands = yes } } add_deposit = d_fertile_lands }
+		50 = { modifier = { factor = 0 NOR = { for_d_great_river = yes } } add_deposit = d_great_river }
+		25 = { modifier = { factor = 0 NOR = { for_d_black_soil = yes } } add_deposit = d_black_soil }
+		25 = { modifier = { factor = 0 NOR = { for_d_teeming_reef = yes } } add_deposit = d_teeming_reef }
+		25 = { modifier = { factor = 0 NOR = { for_d_tropical_island = yes } } add_deposit = d_tropical_island }
+		25 = { modifier = { factor = 0 NOR = { for_d_fungal_forest = yes } } add_deposit = d_fungal_forest }
+	}
+}
+
+bc_add_random_rare_deposit = {	
+	random_list = {
+		100 = { modifier = { factor = 0 NOR = { for_d_dust_caverns = yes } } add_deposit = d_dust_caverns }
+		50 = { modifier = { factor = 0 NOR = { for_d_dust_desert = yes } } add_deposit = d_dust_desert }
+		100 = { modifier = { factor = 0 NOR = { for_d_bubbling_swamp = yes } } add_deposit = d_bubbling_swamp }
+		50 = { modifier = { factor = 0 NOR = { for_d_fuming_bog = yes } } add_deposit = d_fuming_bog }
+		100 = { modifier = { factor = 0 NOR = { for_d_crystalline_caverns = yes } } add_deposit = d_crystalline_caverns }
+		50 = { modifier = { factor = 0 NOR = { for_d_crystal_forest = yes } } add_deposit = d_crystal_forest }	
+		50 = { modifier = { factor = 0 NOR = { for_d_crystal_reef = yes } } add_deposit = d_crystal_reef }
+		15 = { modifier = { factor = 0 NOR = { for_d_betharian_deposit = yes } } add_deposit = d_betharian_deposit }
+		15 = { modifier = { factor = 0 NOR = { for_d_alien_pets_deposit = yes } } add_deposit = d_alien_pets_deposit }
+	}
+}
+
+bc_add_random_deposit = {	
+	random_list = {
+		100 = { modifier = { factor = 0 NOR = { for_d_arid_highlands = yes } } add_deposit = d_arid_highlands }
+		100 = { modifier = { factor = 0 NOR = { for_d_hot_springs = yes } } add_deposit = d_hot_springs }
+		50 = { modifier = { factor = 0 NOR = { for_d_rushing_waterfalls = yes } } add_deposit = d_rushing_waterfalls }
+		50 = { modifier = { factor = 0 NOR = { for_d_searing_desert = yes } } add_deposit = d_searing_desert }
+		50 = { modifier = { factor = 0 NOR = { for_d_frozen_gas_lake = yes	} } add_deposit = d_frozen_gas_lake }	
+		25 = { modifier = { factor = 0 NOR = { for_d_geothermal_vent = yes	} } add_deposit = d_geothermal_vent }
+		25 = { modifier = { factor = 0 NOR = { for_d_underwater_vent = yes	} } add_deposit = d_underwater_vent }
+		25 = { modifier = { factor = 0 NOR = { for_d_tempestous_mountain = yes	} } add_deposit = d_tempestous_mountain }
+		100 = { modifier = { factor = 0 NOR = { for_d_veiny_cliffs = yes } } add_deposit = d_veiny_cliffs }
+		100 = { modifier = { factor = 0 NOR = { for_d_mineral_fields = yes } } add_deposit = d_mineral_fields }
+		50 = { modifier = { factor = 0 NOR = { for_d_prosperous_mesa = yes } } add_deposit = d_prosperous_mesa }
+		50 = { modifier = { factor = 0 NOR = { for_d_ore_rich_caverns = yes } } add_deposit = d_ore_rich_caverns }
+		25 = { modifier = { factor = 0 NOR = { for_d_rich_mountain = yes } } add_deposit = d_rich_mountain }
+		25 = { modifier = { factor = 0 NOR = { for_d_submerged_ore_veins = yes } } add_deposit = d_submerged_ore_veins }
+		100 = { modifier = { factor = 0 NOR = { for_d_lichen_fields = yes } } add_deposit = d_lichen_fields }
+		100 = { modifier = { factor = 0 NOR = { for_d_bountiful_plains = yes } } add_deposit = d_bountiful_plains }
+		100 = { modifier = { factor = 0 NOR = { for_d_rugged_woods = yes } } add_deposit = d_rugged_woods }
+		100 = { modifier = { factor = 0 NOR = { for_d_green_hills = yes } } add_deposit = d_green_hills }
+		100 = { modifier = { factor = 0 NOR = { for_d_forgiving_tundra = yes } } add_deposit = d_forgiving_tundra }
+		100 = { modifier = { factor = 0 NOR = { for_d_boggy_fens = yes } } add_deposit = d_boggy_fens }
+		100 = { modifier = { factor = 0 NOR = { for_d_nutritious_mudland = yes } } add_deposit = d_nutritious_mudland }
+		50 = { modifier = { factor = 0 NOR = { for_d_fungal_caves = yes } } add_deposit = d_fungal_caves }
+		50 = { modifier = { factor = 0 NOR = { for_d_lush_jungle = yes } } add_deposit = d_lush_jungle }
+		50 = { modifier = { factor = 0 NOR = { for_d_fertile_lands = yes } } add_deposit = d_fertile_lands }
+		50 = { modifier = { factor = 0 NOR = { for_d_great_river = yes } } add_deposit = d_great_river }
+		25 = { modifier = { factor = 0 NOR = { for_d_black_soil = yes } } add_deposit = d_black_soil }
+		25 = { modifier = { factor = 0 NOR = { for_d_teeming_reef = yes } } add_deposit = d_teeming_reef }
+		25 = { modifier = { factor = 0 NOR = { for_d_tropical_island = yes } } add_deposit = d_tropical_island }
+		25 = { modifier = { factor = 0 NOR = { for_d_fungal_forest = yes } } add_deposit = d_fungal_forest }	
+		10 = { modifier = { factor = 0 NOR = { for_d_dust_caverns = yes } } add_deposit = d_dust_caverns }
+		5 = { modifier = { factor = 0 NOR = { for_d_dust_desert = yes } } add_deposit = d_dust_desert }
+		10 = { modifier = { factor = 0 NOR = { for_d_bubbling_swamp = yes } } add_deposit = d_bubbling_swamp }
+		5 = { modifier = { factor = 0 NOR = { for_d_fuming_bog = yes } } add_deposit = d_fuming_bog }
+		10 = { modifier = { factor = 0 NOR = { for_d_crystalline_caverns = yes } } add_deposit = d_crystalline_caverns }
+		5 = { modifier = { factor = 0 NOR = { for_d_crystal_forest = yes } } add_deposit = d_crystal_forest }	
+		5 = { modifier = { factor = 0 NOR = { for_d_crystal_reef = yes } } add_deposit = d_crystal_reef }
+		3 = { modifier = { factor = 0 NOR = { for_d_betharian_deposit = yes } } add_deposit = d_betharian_deposit }
+		3 = { modifier = { factor = 0 NOR = { for_d_alien_pets_deposit = yes } } add_deposit = d_alien_pets_deposit }
+	}
+}
+
+bc_add_random_blocker = {
+	random_list = { 
+		200 = {}
+		50 = { modifier = { factor = 0 NOT = { has_deposit = d_mountain_range } } add_deposit = d_mountain_range }
+		50 = { modifier = { factor = 0 NOT = { has_deposit = d_active_volcano } } add_deposit = d_active_volcano }
+		50 = { modifier = { factor = 0 NOT = { has_deposit = d_dangerous_wildlife_blocker } } add_deposit = d_dangerous_wildlife_blocker }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_dense_jungle } } add_deposit = d_dense_jungle }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_toxic_kelp } } add_deposit = d_toxic_kelp }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_deep_sinkhole } } add_deposit = d_deep_sinkhole }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_quicksand_basin } } add_deposit = d_quicksand_basin }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_noxious_swamp } } add_deposit = d_noxious_swamp }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_massive_glacier } } add_deposit = d_massive_glacier }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_radioactive_wasteland } } add_deposit = d_radioactive_wasteland }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_city_ruins } } add_deposit = d_city_ruins }
+		100 = { modifier = { factor = 0 NOT = { has_deposit = d_bomb_crater } } add_deposit = d_bomb_crater }
+	}
+}
+
+bc_add_random_diversity_mod_deposit = {
+	#if = {
+		#limit = { is_district_diversity_mod = yes }
+		random_list = {
+			100 = { modifier = { factor = 0 NOR = { for_d_stormy_highlands = yes } } add_deposit = d_stormy_highlands }
+			50 = { modifier = { factor = 0 NOR = { for_d_stormy_flats = yes } } add_deposit = d_stormy_flats }
+			100 = { modifier = { factor = 0 NOR = { for_d_boiling_lake = yes } } add_deposit = d_boiling_lake }
+			50 = { modifier = { factor = 0 NOR = { for_d_hot_vulcano = yes } } add_deposit = d_hot_vulcano }
+			100 = { modifier = { factor = 0 NOR = { for_d_open_space = yes } } add_deposit = d_open_space }
+			50 = { modifier = { factor = 0 NOR = { for_d_low_athmosphere_zone = yes } } add_deposit = d_low_athmosphere_zone }
+			100 = { modifier = { factor = 0 NOR = { for_d_stable_ground = yes } } add_deposit = d_stable_ground }
+			50 = { modifier = { factor = 0 NOR = { for_d_ultra_stable_ground = yes } } add_deposit = d_ultra_stable_ground }
+			100 = { modifier = { factor = 0 NOR = { for_d_small_rock_formation = yes } } add_deposit = d_small_rock_formation }
+			50 = { modifier = { factor = 0 NOR = { for_d_large_rock_formation = yes } } add_deposit = d_large_rock_formation }
+			100 = { modifier = { factor = 0 NOR = { for_d_interesting_wildlife = yes } } add_deposit = d_interesting_wildlife }
+			25 = { modifier = { factor = 0 NOR = { for_d_complex_ecosystem = yes } } add_deposit = d_complex_ecosystem }
+			100 = { modifier = { factor = 0 NOR = { for_d_relaxing_location = yes } } add_deposit = d_relaxing_location }
+			25 = { modifier = { factor = 0 NOR = { for_d_super_relaxing_location = yes } } add_deposit = d_super_relaxing_location }
+			100 = { modifier = { factor = 0 NOR = { for_d_berries_hedge = yes } } add_deposit = d_berries_hedge }
+			25 = { modifier = { factor = 0 NOR = { for_d_mushroom_ecosystem = yes } } add_deposit = d_mushroom_ecosystem }
+			100 = { modifier = { factor = 0 NOR = { for_d_carbon_compounds = yes } } add_deposit = d_carbon_compounds }
+			25 = { modifier = { factor = 0 NOR = { for_d_complex_carbon_compounds = yes } } add_deposit = d_complex_carbon_compounds }
+			100 = { modifier = { factor = 0 NOR = { for_d_bubbling_lake = yes } } add_deposit = d_bubbling_lake }
+			25 = { modifier = { factor = 0 NOR = { for_d_bubbling_ocean = yes } } add_deposit = d_bubbling_ocean }
+			100 = { modifier = { factor = 0 NOR = { for_d_luminescent_cave = yes } } add_deposit = d_luminescent_cave }
+			25 = { modifier = { factor = 0 NOR = { for_d_luminescent_cave_system = yes } } add_deposit = d_luminescent_cave_system }
+		}
+	#}
+}
+
