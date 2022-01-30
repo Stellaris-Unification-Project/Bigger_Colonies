@@ -680,7 +680,7 @@ for_d_alien_pets_deposit = {
 ### District Diversity
 	
 is_district_diversity_mod = {
-	any_planet = {
+	any_system_planet = {
 		OR = {
 			has_deposit = d_stormy_highlands
 			has_deposit = d_stormy_flats
